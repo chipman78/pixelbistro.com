@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Test</title>
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="viewport" content="width=device-width,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;			
+		}
+		html {
+			height: 100%;
+			padding: 0;
+			margin: 0;
+		}
+		body {
+			height: 100%;
+			width: 100%;
+			background-color: #000;
+			color: #fff;
+			font-family: -apple-system, sans-serif;
+			padding: 0;
+			margin: 0;
+		}
+		a {
+			color: #fff;
+		}
+		section {
+			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+		}
+		#intro {
+			background-color: #333;
+			overflow-x: scroll;
+			overflow-y: hidden;
+			white-space: nowrap;
+			width: 400%;
+			-webkit-scroll-snap-points-x: repeat(100%);
+			-webkit-scroll-snap-type: mandatory;
+		}
+		.intro_page {
+			width: 25%;
+			height: 100%;
+			float: left;
+		}
+			#page1 { background-color: #300; }
+			#page2 { background-color: #600; }
+			#page3 { background-color: #900; }
+			#page4 { background-color: #c00; }
+	</style>
+
+</head>
+
+<body>
+	<section id="intro">
+		<div class="intro_page" id="page1"></div>
+		<div class="intro_page" id="page2"></div>
+		<div class="intro_page" id="page3"></div>
+		<div class="intro_page" id="page4"></div>
+	</section>
+</body>
+</html>
