@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title>CSS Test</title>
-	<meta name="HandheldFriendly" content="true" />
 	<meta name="viewport" content="width=device-width,user-scalable=no" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 
@@ -25,22 +24,30 @@
 			font-family: -apple-system, sans-serif;
 			padding: 0;
 			margin: 0;
+			overflow: hidden;
 		}
 		a {
 			color: #fff;
 		}
 		section {
-			position: absolute;
-			top: 0; right: 0; bottom: 0; left: 0;
+			height: 100%;
+			width: 100%;
 		}
 		#intro {
 			background-color: #333;
+		}
+		.scroll_container {
 			overflow-x: scroll;
 			overflow-y: hidden;
 			white-space: nowrap;
 			-webkit-scroll-snap-points-x: repeat(100%);
 			-webkit-scroll-snap-type: mandatory;
+			width: 100%;
+		}
+
+		.scroll_inside {
 			width: 400%;
+			height: 100%
 		}
 		.intro_page {
 			width: 25%;
@@ -56,11 +63,15 @@
 </head>
 
 <body>
-	<section id="intro">
-		<div class="intro_page" id="page1"></div>
-		<div class="intro_page" id="page2"></div>
-		<div class="intro_page" id="page3"></div>
-		<div class="intro_page" id="page4"></div>
+	<section id="intro" class="scroll_container">
+		<div class="scroll_inside">
+			<div class="intro_page" id="page1"></div>
+			<div class="intro_page" id="page2"></div>
+			<div class="intro_page" id="page3"></div>
+			<div class="intro_page" id="page4"></div>
+		</div>
 	</section>
+
+	<h1>test</h1>
 </body>
 </html>
